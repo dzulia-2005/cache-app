@@ -2,7 +2,7 @@ import type { CreateAxiosDefaults } from "axios";
 import axios from "axios";
 
 const axiosConfig:CreateAxiosDefaults = {
-    baseURL:"http://localhost:5299/api"
+    baseURL:import.meta.env.VITE_API_URL
 }
 
 export const HttpClient = axios.create(axiosConfig);
