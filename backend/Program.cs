@@ -1,4 +1,5 @@
 using backend.Data;
+using backend.Services;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
 
@@ -22,6 +23,10 @@ builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration["Redis:Connection"];
 });
+
+builder.Services.AddScoped<CacheService>();
+builder.Services.AddScoped<LockService>();
+builder.Services.AddScoped<StatsService>();
 
 var app = builder.Build();
 
