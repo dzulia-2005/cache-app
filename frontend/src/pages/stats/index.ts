@@ -1,1 +1,1 @@
-export {default} from "../stats/stats.tsx";
+export {default} from "./view/stats.tsx";
