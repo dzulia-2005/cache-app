@@ -42,8 +42,6 @@ public class StatsService
             }
         }
 
-        return await _dbContext.Stats.FirstOrDefaultAsync();
-
         var stats = await _dbContext.Stats.FirstOrDefaultAsync();
         if (stats!=null)
         {

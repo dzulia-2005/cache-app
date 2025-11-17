@@ -30,6 +30,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 builder.Services.AddScoped<CacheService>();
 builder.Services.AddScoped<LockService>();
 builder.Services.AddScoped<StatsService>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
